@@ -22,7 +22,7 @@ namespace CottingsleyModel
         public int Id { get; set; }
         [DataMemberAttribute]
         public string Question { get; set; }
-        //public virtual ICollection<SurveyQuestionOption> Options { get; set; }
+        public virtual ICollection<SurveyQuestionOption> Options { get; set; }
 
         //public int SurveyId { get; set; }
 
@@ -37,8 +37,8 @@ namespace CottingsleyModel
         [DataMemberAttribute]
         public int SurveyQuestionId { get; set; }
 
-        //[ForeignKey("SurveyQuestionId")]
-        //public virtual SurveyQuestion SurveyQuestionObj { get; set; }
+        [ForeignKey("SurveyQuestionId")]
+        public virtual SurveyQuestion SurveyQuestionObj { get; set; }
         [DataMemberAttribute]
         public string Option { get; set; }
     }
