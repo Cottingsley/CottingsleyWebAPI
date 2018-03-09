@@ -1,0 +1,13 @@
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\CottingsleyService.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\CottingsleyService.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\obj\Debug\CottingsleyService.csprojResolveAssemblyReference.cache
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\obj\Debug\CottingsleyService.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\obj\Debug\CottingsleyService.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\CottingsleyContracts.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\CottingsleyModel.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\CottingsleyRepository.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\EntityFramework.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\CottingsleyContracts.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\CottingsleyModel.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\CottingsleyRepository.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyService\bin\Debug\EntityFramework.xml

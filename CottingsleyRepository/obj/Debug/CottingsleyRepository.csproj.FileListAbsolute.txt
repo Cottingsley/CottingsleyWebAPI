@@ -1,0 +1,14 @@
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\CottingsleyRepository.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\CottingsleyRepository.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\CottingsleyModel.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\CottingsleyModel.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\obj\Debug\CottingsleyRepository.csprojResolveAssemblyReference.cache
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\obj\Debug\CottingsleyRepository.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\obj\Debug\CottingsleyRepository.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\CottingsleyRepository.dll.config
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\CottingsleyContracts.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\EntityFramework.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\CottingsleyContracts.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\EntityFramework.xml
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyRepository\bin\Debug\EntityFramework.SqlServer.xml

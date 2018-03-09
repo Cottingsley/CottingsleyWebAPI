@@ -1,0 +1,7 @@
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyContracts\bin\Debug\CottingsleyContracts.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyContracts\bin\Debug\CottingsleyContracts.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyContracts\bin\Debug\CottingsleyModel.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyContracts\bin\Debug\CottingsleyModel.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyContracts\obj\Debug\CottingsleyContracts.csprojResolveAssemblyReference.cache
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyContracts\obj\Debug\CottingsleyContracts.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyContracts\obj\Debug\CottingsleyContracts.pdb

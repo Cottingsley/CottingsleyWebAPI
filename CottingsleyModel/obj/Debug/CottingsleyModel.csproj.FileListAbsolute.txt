@@ -1,0 +1,5 @@
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyModel\bin\Debug\CottingsleyModel.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyModel\bin\Debug\CottingsleyModel.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyModel\obj\Debug\CottingsleyModel.dll
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyModel\obj\Debug\CottingsleyModel.pdb
+D:\Sagar\Dot Net project\Cottingsley\CottingsleyModel\obj\Debug\CottingsleyModel.csprojResolveAssemblyReference.cache
