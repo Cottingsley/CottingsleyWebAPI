@@ -20,7 +20,22 @@ namespace CottingsleyRepository
             }
         }
 
-        public void CreateQuestions(List<SurveyQuestion> surveyQuestions, List<SurveyQuestionOption> optionList)
+        public void CreateOptions(int QuestionId, List<SurveyQuestionOption> optionList)
+        {
+            for (int i = 0; i < optionList.Count; i++)
+            {
+                var obj = optionList[i];
+                obj.SurveyQuestionId = QuestionId;
+                using (var landingPageContext = new LandingPage())
+                {
+                    landingPageContext.SurveyQuestionOptionEntities.Add(obj);
+                    landingPageContext.SaveChanges();
+                }
+            }
+            
+        }
+
+        public void CreateQuestions(List<SurveyQuestion> surveyQuestions)
         {
             using (var landingPageContext = new LandingPage())
             {
@@ -29,30 +44,24 @@ namespace CottingsleyRepository
                     landingPageContext.SurveyQuestionEntities.Add(item);
                     landingPageContext.SaveChanges();
                 }
-                foreach (var option in optionList)
-                {
-                    landingPageContext.SurveyQuestionOptionEntities.Add(option);
-                    landingPageContext.SaveChanges();
-                }
             }
         }
 
-        //public void CreateQuestions(List<SurveyQuestion> surveyQuestions)
-        //{
-        //    using (var landingPageContext = new LandingPage())
-        //    {
-        //        foreach (var item in surveyQuestions)
-        //        {
-        //            foreach (var option in item.Options)
-        //            {
-        //                landingPageContext.SurveyQuestionOptionEntities.Add(option);
-        //                landingPageContext.SaveChanges();
-        //            }
-        //            landingPageContext.SurveyQuestionEntities.Add(item);
-        //            landingPageContext.SaveChanges();
-        //        }
-        //    }
-        //}
+        public List<SurveyQuestion> GetAllQuestions()
+        {
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.SurveyQuestionEntities.ToList();
+            }
+        }
+
+        public SurveyQuestion GetQuestionById(int id)
+        {
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.SurveyQuestionEntities.Where(x=> x.Id==id).FirstOrDefault();
+            }
+        }
 
         public Survey GetSurveyById(int id)
         {
