@@ -12,6 +12,9 @@ namespace CottingsleyContracts
         void CreateEntry(Survey survey);
         Survey GetSurveyById(int id);
         List<object> GetSurveyQuestionList();
-        void CreateQuestions(List<SurveyQuestion> surveyQuestions,List<SurveyQuestionOption> optionList);
+        void CreateQuestions(List<SurveyQuestion> surveyQuestions);
+        void CreateOptions(int QuestionId, List<SurveyQuestionOption> optionList);
+        List<SurveyQuestion> GetAllQuestions();
+        SurveyQuestion GetQuestionById(int id);
     }
 }
