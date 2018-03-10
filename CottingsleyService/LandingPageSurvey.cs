@@ -18,12 +18,27 @@ namespace CottingsleyService
         {
             surveyRepo.CreateEntry(survey);
         }
-
-        public void CreateQuestions(List<SurveyQuestion> surveyQuestions, List<SurveyQuestionOption> optionList)
-        {
-            surveyRepo.CreateQuestions(surveyQuestions, optionList);
-        }
         
+        public void CreateOptions(int QuestionId, List<SurveyQuestionOption> optionList)
+        {
+            surveyRepo.CreateOptions(QuestionId, optionList);
+        }
+
+        public void CreateQuestions(List<SurveyQuestion> surveyQuestions)
+        {
+            surveyRepo.CreateQuestions(surveyQuestions);
+        }
+
+        public List<SurveyQuestion> GetAllQuestions()
+        {
+            return surveyRepo.GetAllQuestions();
+        }
+
+        public SurveyQuestion GetQuestionById(int id)
+        {
+            return surveyRepo.GetQuestionById(id);
+        }
+
         public Survey GetSurveyById(int id)
         {
             return surveyRepo.GetSurveyById(id);
