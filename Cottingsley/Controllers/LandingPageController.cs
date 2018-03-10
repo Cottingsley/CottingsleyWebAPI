@@ -26,52 +26,116 @@ namespace Cottingsley.Controllers
         {
             return "value";
         }
-        
-        [Route("GetQuestions")]
-        public IHttpActionResult GetQuestions() {
+
+        /// <summary>
+        /// Get only questions
+        /// </summary>
+        /// <returns></returns>
+        [Route("GetAllQuestions")]
+        public IHttpActionResult GetAllOnlyQuestions() {
             try
             {
                 ILandingPageSurvey surveyService = new LandingPageSurvey();
-                List<SurveyQuestion> surveyQuestionList = new List<SurveyQuestion>() { new SurveyQuestion
+                return Json(new Response
                 {
-                    Id = 1,
-                    Question = "What is what?"
+                    Message = "Data received successfuly",
+                    Status = true,
+                    Data = surveyService.GetAllQuestions()
+                });
+            }
+            catch (Exception)
+            {
 
-                }};
-                List<SurveyQuestionOption> surveyQuestionOptions = new List<SurveyQuestionOption>() {
-                        new SurveyQuestionOption {
-                        Id=1,
-                        Option="option1",
-                        SurveyQuestionId=1
-                        },
-                        new SurveyQuestionOption {
-                        Id=2,
-                        Option="option2",
-                        SurveyQuestionId=1
-                        }
-                    };
-                surveyService.CreateQuestions(surveyQuestionList, surveyQuestionOptions);
-                
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get Question with options
+        /// </summary>
+        /// <returns></returns>
+        [Route("GetSurveyQuestions")]
+        public IHttpActionResult GetSurveyQuestions() {
+            try
+            {
+                ILandingPageSurvey surveyService = new LandingPageSurvey();
                 return Json(new Response
                 {
                     Message = "Data received successfuly",
                     Status = true,
                     Data = surveyService.GetSurveyQuestionList()
                 });
-                //return new Response
-                //{
-                //    Message = "Data received successfuly",
-                //    Status = true,
-                //    Data = surveyService.GetSurveyQuestionList()
-                //};
-
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-
-                throw ex;
+                throw e;
             }
-            
+        }
+
+        /// <summary>
+        /// Get single question by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [Route("GetSurveyQuestionsById")]
+        public IHttpActionResult GetSurveyQuestionsById(int id)
+        {
+            try
+            {
+                ILandingPageSurvey surveyService = new LandingPageSurvey();
+                return Json(new Response
+                {
+                    Message = "Data received successfuly",
+                    Status = true,
+                    Data = surveyService.GetQuestionById(id)
+                });
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Post Questions
+        /// </summary>
+        /// <param name="surveyQuestionList"></param>
+        /// <returns></returns>
+        [Route("PostSurveyQuestions")]
+        public IHttpActionResult PostSurveyQuestions(List<SurveyQuestion> surveyQuestionList) {
+            try
+            {
+                ILandingPageSurvey surveyService = new LandingPageSurvey();
+                surveyService.CreateQuestions(surveyQuestionList);
+                return Json(new Response
+                {
+                    Message = "Questions created successfuly",
+                    Status = true,
+                    Data = null
+                });
+            }
+            catch (Exception e) {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Create options of a question
+        /// </summary>
+        /// <param name="questionId"></param>
+        /// <param name="surveyQuestionOptions"></param>
+        /// <returns></returns>
+        [Route("PostSurveyOptions")]
+        public IHttpActionResult PostSurveyOptions(int questionId, List<SurveyQuestionOption> surveyQuestionOptions)
+        {
+            ILandingPageSurvey surveyService = new LandingPageSurvey();
+            surveyService.CreateOptions(questionId, surveyQuestionOptions);
+            return Json(new Response
+            {
+                Message = "Questions created successfuly",
+                Status = true,
+                Data = null
+            });
         }
 
         // POST: api/LandingPage
