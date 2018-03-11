@@ -12,37 +12,57 @@ namespace CottingsleyRepository
     {
         public void CreateEntry(Visitor user)
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage()) {
+                landingPageContext.VisitorEntities.Add(user);
+            }
         }
 
         public List<Visitor> GetAll()
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.VisitorEntities.ToList();
+            }
         }
 
         public School GetSchoolByVisitorId(int userId)
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.VisitorEntities.Where(x=> x.Id== userId).Select(y=>y.SchoolObj).FirstOrDefault();
+            }
         }
 
         public Survey GetSurveyByVisitorId(int userId)
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.VisitorEntities.Where(x => x.Id == userId).Select(y => y.SurveyObj).FirstOrDefault();
+            }
         }
 
         public Visitor GetVisitorByEmail(string email)
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.VisitorEntities.Where(x => x.Email == email).FirstOrDefault();
+            }
         }
 
         public Visitor GetVisitorById(int userId)
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.VisitorEntities.Where(x => x.Id == userId).FirstOrDefault();
+            }
         }
 
         public List<Visitor> GetVisitorListByDesignation(string designation)
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.VisitorEntities.Where(x => x.Designation == designation).ToList();
+            }
         }
     }
 }

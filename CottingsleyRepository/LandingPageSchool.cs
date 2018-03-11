@@ -10,19 +10,30 @@ namespace CottingsleyRepository
 {
     public class LandingPageSchool : ILandingPageSchool
     {
+        
         public void CreateEntry(School school)
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                landingPageContext.SchoolEntities.Add(school);
+                landingPageContext.SaveChanges();
+            }
         }
 
         public List<School> GetAll()
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.SchoolEntities.ToList();
+            }
         }
 
         public School GetSchoolById(int schoolId)
         {
-            throw new NotImplementedException();
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.SchoolEntities.Where(x=> x.Id == schoolId).FirstOrDefault();
+            }
         }
     }
 }
