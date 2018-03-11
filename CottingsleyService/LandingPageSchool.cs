@@ -11,7 +11,7 @@ namespace CottingsleyService
     public class LandingPageSchool : ILandingPageSchool
     {
         ILandingPageSchool schoolRepo;
-        public LandingPageSchool() {
+        public LandingPageSchool() {            
             schoolRepo = new CottingsleyRepository.LandingPageSchool();
         }
         public void CreateEntry(School school)
