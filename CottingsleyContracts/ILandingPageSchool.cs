@@ -11,6 +11,7 @@ namespace CottingsleyContracts
     {
         void CreateEntry(School school);
         School GetSchoolById(int schoolId);
+        School GetSchoolByName(string schoolName);
         List<School> GetAll();
     }
 }

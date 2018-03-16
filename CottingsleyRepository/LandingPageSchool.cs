@@ -35,5 +35,13 @@ namespace CottingsleyRepository
                 return landingPageContext.SchoolEntities.Where(x=> x.Id == schoolId).FirstOrDefault();
             }
         }
+
+        public School GetSchoolByName(string schoolName)
+        {
+            using (var landingPageContext = new LandingPage())
+            {
+                return landingPageContext.SchoolEntities.Where(x => x.Name.ToLower().Replace(' ','@') == schoolName.ToLower().Replace(' ', '@')).FirstOrDefault();
+            }
+        }
     }
 }

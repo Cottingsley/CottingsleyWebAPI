@@ -28,5 +28,10 @@ namespace CottingsleyService
         {
             return schoolRepo.GetSchoolById(schoolId);
         }
+
+        public School GetSchoolByName(string schoolName)
+        {
+            return schoolRepo.GetSchoolByName(schoolName);
+        }
     }
 }
