@@ -9,6 +9,7 @@ using CottingsleyService;
 using CottingsleyContracts;
 using System.Collections.ObjectModel;
 using System.Collections;
+using CottingsleyWebAPI.Models;
 
 namespace Cottingsley.Controllers
 {
@@ -125,6 +126,25 @@ namespace Cottingsley.Controllers
                 Status = true,
                 Data = null
             });
+        }
+        [Route("PostRegistrationQuestions")]
+        public IHttpActionResult PostRegistrationQuestions(SchoolRegistration schoolRegistration)
+        {
+            try
+            {
+                //ILandingPageSurvey surveyService = new LandingPageSurvey();
+                //surveyService.CreateQuestions(surveyQuestionList);
+                return Json(new Response
+                {
+                    Message = "Question created successfuly",
+                    Status = true,
+                    Data = null
+                });
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
         
     }
