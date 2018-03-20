@@ -128,7 +128,7 @@ namespace Cottingsley.Controllers
             });
         }
         [Route("PostRegistrationQuestions")]
-        public IHttpActionResult PostRegistrationQuestions(SchoolRegistration schoolRegistration)
+        public IHttpActionResult PostSchoolRegistration(SchoolRegistration schoolRegistration)
         {
             try
             {
